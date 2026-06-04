@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "803270358816",
+    "project_id": "ac-mobiledevelopment",
+    "storage_bucket": "ac-mobiledevelopment.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803270358816:android:d053eb8c9e3b2d2f3f4945",
+        "android_client_info": {
+          "package_name": "com.facens.BibliotecaGPS"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhPmDWKE-6Q4kk9wSqHKtmVCpx5rBd8Ig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
