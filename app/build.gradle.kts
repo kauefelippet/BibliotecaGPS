@@ -12,7 +12,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.facens.bibliotecagps"
+        applicationId = "com.facens.BibliotecaGPS"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -42,6 +42,9 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.material)
     implementation(platform("com.google.firebase:firebase-bom:34.14.0"))
+    implementation(libs.play.services.location)
+    implementation("com.google.android.gms:play-services-location:21.3.0")
+    implementation(libs.firebase.firestore)
     testImplementation(libs.junit)
     androidTestImplementation(libs.espresso.core)
     androidTestImplementation(libs.ext.junit)

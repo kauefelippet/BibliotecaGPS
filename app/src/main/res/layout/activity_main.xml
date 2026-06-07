@@ -1,19 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/edtBuscaLivro"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:hint="Digite o nome do livro" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btnBuscar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Buscar Livro"
+        android:onClick="buscarLivroNaApi" />
+
+    <TextView
+        android:id="@+id/txtResultadoBusca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="O resultado aparecerá aqui..."
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#CCCCCC"/>
+
+    <TextView
+        android:id="@+id/txtCoordenadas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Localização: Aguardando GPS..."
+        android:textSize="14sp"
+        android:textStyle="italic"/>
+
+    <Button
+        android:id="@+id/btnCapturarLocal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Pegar Localização e Preparar Cadastro"
+        android:onClick="capturarLocalizacao" />
+
+    <EditText
+        android:id="@+id/edtLocalEncontrado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Onde encontrou? (ex: Biblioteca, Livraria)" />
+
+    <EditText
+        android:id="@+id/edtStatusLeitura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Status (Quero ler, Lendo ou Concluído)" />
+
+    <EditText
+        android:id="@+id/edtObservacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Observação pessoal" />
+
+    <Button
+        android:id="@+id/btnSalvarFirebase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Salvar Livro no Firebase"
+        android:onClick="salvarLivroNoFirebase" />
+
+</LinearLayout>
