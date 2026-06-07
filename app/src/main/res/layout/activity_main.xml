@@ -1,83 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FAFAFA"
     android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".MainActivity">
-
-    <EditText
-        android:id="@+id/edtBuscaLivro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Digite o nome do livro" />
-
-    <Button
-        android:id="@+id/btnBuscar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Buscar Livro"
-        android:onClick="buscarLivroNaApi" />
+    android:padding="16dp">
 
     <TextView
-        android:id="@+id/txtResultadoBusca"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="O resultado aparecerá aqui..."
-        android:textSize="16sp" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:background="#CCCCCC"/>
+        android:text="Biblioteca GPS"
+        android:textSize="22sp"
+        android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txtCoordenadas"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Localização: Aguardando GPS..."
-        android:textSize="14sp"
-        android:textStyle="italic"/>
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnCapturarLocal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Pegar Localização e Preparar Cadastro"
-        android:onClick="capturarLocalizacao" />
+        <EditText
+            android:id="@+id/etPesquisa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Título, autor ou palavra-chave"
+            android:imeOptions="actionSearch"
+            android:inputType="text" />
 
-    <EditText
-        android:id="@+id/edtLocalEncontrado"
-        android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btnBuscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Buscar" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
-        android:hint="Onde encontrou? (ex: Biblioteca, Livraria)" />
+        android:visibility="gone" />
 
-    <EditText
-        android:id="@+id/edtStatusLeitura"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerLivros"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Status (Quero ler, Lendo ou Concluído)" />
-
-    <EditText
-        android:id="@+id/edtObservacao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Observação pessoal" />
-
-    <Button
-        android:id="@+id/btnSalvarFirebase"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Salvar Livro no Firebase"
-        android:onClick="salvarLivroNoFirebase" />
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1" />
 
 </LinearLayout>
