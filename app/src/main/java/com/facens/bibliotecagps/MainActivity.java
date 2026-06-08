@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String API_KEY = BuildConfig.API_KEY;
 
     private EditText edtPesquisa;
-    private Button btnBuscar;
+    private Button btnVerLista, btnBuscar;
     private ProgressBar progressBar;
     private RecyclerView recyclerLivros;
 
@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Vinculo dos componentes da interface
         edtPesquisa = findViewById(R.id.etPesquisa);
+        btnVerLista = findViewById(R.id.btnVerLista);
         btnBuscar     = findViewById(R.id.btnBuscar);
         progressBar   = findViewById(R.id.progressBar);
         recyclerLivros = findViewById(R.id.recyclerLivros);
@@ -48,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
         adapter = new LivroAdapter(listaLivros, livro -> abrirCadastro(livro));
         recyclerLivros.setLayoutManager(new LinearLayoutManager(this));
         recyclerLivros.setAdapter(adapter);
+
+        btnVerLista.setOnClickListener(v -> {
+            startActivity(new Intent(this, ListaActivity.class));
+        });
 
         btnBuscar.setOnClickListener(v -> {
             String termo = edtPesquisa.getText().toString().trim();
