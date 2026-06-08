@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.facens.BibliotecaGPS" />
+                  <option name="mobileSdkAppId" value="1:803270358816:android:d053eb8c9e3b2d2f3f4945" />
+                  <option name="projectId" value="ac-mobiledevelopment" />
+                  <option name="projectNumber" value="803270358816" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
