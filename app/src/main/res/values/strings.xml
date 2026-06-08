@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">BibliotecaGPS</string>
+    <string-array name="situacao_encontrado">
+        <item>Biblioteca</item>
+        <item>Livraria</item>
+        <item>Aula</item>
+        <item>Indicação</item>
+        <item>Leitura em casa</item>
+        <item>Viagem</item>
+        <item>Outro</item>
+    </string-array>
+    <string-array name="status_leitura">
+        <item>Quero ler</item>
+        <item>Lendo</item>
+        <item>Concluído</item>
+    </string-array>
 </resources>

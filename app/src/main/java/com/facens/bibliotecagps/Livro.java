@@ -1,6 +1,8 @@
 package com.facens.bibliotecagps;
 
-public class Livro {
+import java.io.Serializable;
+
+public class Livro implements Serializable {
 
     // Identificador para o Firebase
     private String id;

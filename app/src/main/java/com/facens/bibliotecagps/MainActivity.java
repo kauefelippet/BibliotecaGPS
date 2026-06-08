@@ -1,5 +1,6 @@
 package com.facens.bibliotecagps;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -122,7 +123,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void abrirCadastro(Livro livro) {
-        // TODO: Passar o livro para a próxima tela via Intent
-        Toast.makeText(this, "Selecionado: " + livro.getTitulo(), Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, CadastroActivity.class);
+        intent.putExtra("livro", livro);
+        startActivity(intent);
     }
 }
