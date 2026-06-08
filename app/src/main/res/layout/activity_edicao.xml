@@ -61,6 +61,27 @@
         android:gravity="top"
         android:layout_marginBottom="24dp"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Localização"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/tvCoordenadasEdicao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#888888"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnAtualizarLocalizacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atualizar localização"
+        android:layout_marginBottom="24dp"/>
+
     <Button
         android:id="@+id/btnSalvarEdicao"
         android:layout_width="match_parent"
